@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* BAR DE NAVIGATION */
+header {
+  position: absolute;
+  width: 100%;
+  height: 7vh;
+  top: 0;
+  left: 0;
+  color: black;
+  padding: 0 2rem;
+  background: #ffeff1;
+  border-bottom: 1px solid rgba(166, 146, 169, 0.527);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 5;
+  -webkit-animation-name: apparition;
+          animation-name: apparition;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes apparition {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@keyframes apparition {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.toggle {
+  display: none;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  width: 100%;
+  letter-spacing: 0.3rem;
+}
+
+.logo_fb_insta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fb, .insta {
+  font-size: 1.4rem;
+  padding: 10px;
+  margin: 20px;
+  color: black;
+}
+
+.menu li a {
+  color: #2a4284;
+  text-decoration: none;
+  font-family: "Ibarra Real Nova", serif;
+  font-size: 1.6rem;
+}
+
+.menu li a:hover {
+  color: grey;
+}
+
+@media all and (max-width: 991px) {
+  .toggle {
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 20;
+  }
+  .ouvrir {
+    display: block;
+  }
+  .fermer {
+    display: none;
+  }
+  .open .ouvrir {
+    display: none;
+  }
+  .open .fermer {
+    display: block;
+  }
+  .menu {
+    position: absolute;
+    top: 0vh;
+    left: 0;
+    width: 200px;
+    overflow-x: hidden;
+    height: 100vh;
+    background: #ffeff1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 2rem;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    z-index: 1;
+  }
+  .menu li a {
+    font-size: 1.3rem;
+    overflow: hidden;
+  }
+  .open .menu {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.prestation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-family: "Ibarra Real Nova", serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1600px) {
+  .prestation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 1%;
+  }
+}
+
+.prestation li {
+  list-style: none;
+}
+
+.prestation .first_formula, .prestation .second_formula, .prestation .third_formula, .prestation .fourth_formula, .prestation .fifth_formula {
+  margin-top: 70px;
+  width: 100%;
+  height: 0%;
+  background: #ffeff1;
+  padding: 20px;
+  color: #2a4284;
+}
+
+.prestation .text1, .prestation .text2, .prestation .text3, .prestation .text4, .prestation .text5 {
+  display: none;
+}
+
+.prestation .ouvrir1, .prestation .ouvrir2, .prestation .ouvrir3, .prestation .ouvrir4, .prestation .ouvrir5 {
+  display: block;
+}
+
+.prestation .title1, .prestation .title2, .prestation .title3, .prestation .title4, .prestation .title5 {
+  cursor: pointer;
+  font-size: 0.6rem;
+  height: 0%;
+}
+
+.prestation .title1 :hover, .prestation .title2 :hover, .prestation .title3 :hover, .prestation .title4 :hover, .prestation .title5 :hover {
+  color: rgba(166, 146, 169, 0.527);
+}
+
+.prestation .title5 {
+  margin-left: -20px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Ibarra Real Nova", serif;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid black;
+  padding: 50px;
+  padding-bottom: 0px;
+  margin: 50px;
+  margin-bottom: 0px;
+  font-size: 1.2rem;
+  color: grey;
+  height: 0%;
+}
+
+.contact {
+  position: relative;
+}
+/*# sourceMappingURL=prestation_page.css.map */

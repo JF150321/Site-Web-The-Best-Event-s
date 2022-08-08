@@ -1,0 +1,434 @@
+
+ $colorpink: rgb(255, 239, 241);
+$colorpurple: rgba(166, 146, 169, 0.527);
+$titleFont : 'Pinyon Script', cursive;
+$textfont : 'Ibarra Real Nova', serif;
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BAR DE NAVIGATION */
+header {
+    position: absolute;
+    width: 100%;
+    height: 9vh;
+    top: 0;
+    left: 0;
+    color: black;
+    padding: 0 2rem;
+    background: $colorpink;
+    transition: 0.5s;
+    z-index: 5;
+    animation-name: apparition;
+        animation-duration: 3s;
+        @keyframes apparition {
+            from{top: -100px;}
+            to{top: 0px;}
+        }
+}
+
+
+    nav {
+        
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+   
+
+
+        .toggle {
+            display: none;
+        }
+
+            .menu {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                list-style: none;
+                width: 100%;
+                padding: 100px;
+                letter-spacing: 0.3rem;
+                
+            }
+                .logo_fb_insta {
+                    display: flex;
+                    
+                }
+                .fb, .insta {
+                    font-size: 1.4rem;
+                    padding: 10px;
+                    margin: 20px;
+                    color: black;
+                }
+                
+                    .menu li a {
+                        color:  rgb(42,66,132);
+                        text-decoration: none;
+                        font-family: $textfont;
+                        font-size: 1.6rem;
+                            &:hover {
+                                color: grey;
+                            }
+                        }
+                        
+                        @media all and (max-width: 991px) {
+
+                            
+                            nav {
+                                border:none
+                                
+                                }
+
+                            .toggle {
+                                display: block;
+                                margin-left: -15%;
+                                font-size: 2rem;
+                                cursor: pointer;
+                                position: relative;
+                                z-index: 20;
+                            }
+
+                            
+
+                            .ouvrir {
+                                display: block;
+                            }
+
+                            .fermer {
+                                display: none;
+                            }
+
+                            .open .ouvrir {
+                                display: none;
+                            }
+
+                            .open .fermer {
+                                display: block;
+                            }
+
+                            .menu{
+                                position: absolute;
+                                top: 0vh;
+                                left: 0;
+                                width: 40%;
+                                height: 100vh;
+                                background: $colorpink;
+                                flex-direction: column;
+                                padding: 2rem;
+                                justify-content: space-around;
+                                transform: translateX(-100%);
+                                transition: transform 1s;
+                                z-index: 1;
+                                overflow-y: hidden;
+                            }
+
+                            .menu li a {
+                                font-size: 1.3rem;
+                                
+                            }
+                            .logo_tbe {
+                                display: none;
+                            }
+                            
+                            .open .menu {
+                                transform: translateX(0);
+                            }
+                            
+                        }
+                        
+    
+
+            
+                
+
+ /* HOME PAGE */   
+
+#home_page {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    @media screen and (max-width:820px) {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+
+
+       /* .block_texte { /* c'est un block blanc qui permet de faire découvrire tous le texte progressivement a l'ouerture de la page 
+            position: absolute;
+            width: 1400px;
+            height: 410px;
+            top: 580px;
+            background: white;
+            z-index: 0;
+            display: block;
+            animation-name: apparationtexte;
+            animation-duration: 5s;
+                @media screen and (max-width:1200px) {
+                    height: 510px;
+                    top: 450px;
+                }
+                @media screen and (max-width:820px) {
+                    top: 550px;
+                    height: 800px;
+            
+                }
+                @keyframes apparationtexte {
+                    from{
+                        height: 800px;
+                        z-index: 30;
+                    } to {
+                        height: 0px;
+                
+                    }
+            }
+
+    } */
+    
+            .decoration_home_page { /* c'est le trais au millieu de la page */
+                position: relative;
+                left: 17%;
+                top: 350px;
+                z-index: 5;
+                width: 1px;
+                height: 200px;
+                background:rgb(42,66,132) ;
+                transition: 1s;
+                animation-name: aparition;
+                animation-duration: 4s;
+                    @media screen and (max-width:1530px) {
+                        top: 320px;
+                        left: 15%;
+                    }
+                    @media screen and (max-width:1300px) {
+                        top: 270px;
+                        left: 15%;
+                    }
+                    @media screen and (max-width:1100px) {
+                        display: none;
+            
+                    }
+                        @keyframes aparition {
+                            from{height: 0; }
+                            to{height: 200px; }
+                        }
+                }
+    
+                .logo_tbe2 {
+                    position: relative;
+                    width: 400px;
+                    height: 400px;
+                    top: 120px;
+                    left: -550px;
+                    z-index: 1;
+                    background: white;
+                    border-radius: 50%;
+                    transition: 1s;
+                    animation-name: logo_apparition;
+                    animation-duration: 3s;
+                        @media screen and (max-width:1550px) {
+                            left: -350px;
+                            width: 300px;
+                            height: 300px;
+                            top: 80px;
+                        }
+                        @media screen and (max-width:1300px) {
+                            width: 200px;
+                            height: 200px;
+                            left: -250px;
+                            top: 140px;
+                        }
+                        @media screen and (max-width:920px) {
+                            width: 200px;
+                            left: -200px;
+                        }
+                        @media screen and (max-width:820px) {
+                            left: 2%;
+                        }
+                            
+                    }
+
+                    .text_home {
+                        
+                        font-family: 'Ibarra Real Nova', serif;
+                        font-size: 1.4rem;
+                        text-align: center;
+                        color:  rgb(42,66,132);
+                        width: 1400px;
+                        background: $colorpink;
+                        margin: 200px;
+                        padding: 80px;
+                        text-align: center;
+                        z-index: 0;
+                        animation-name: transition;
+                        animation-duration: 5s;
+                            @keyframes transition {
+                                from {
+                                    opacity: 0;
+                                    
+                                } to {
+                                    opacity: 1;
+                                    
+                                }
+                                
+                            }
+                            @media screen and (max-width:1730px) {
+                                padding: 60px ;
+                            }
+                            @media screen and (max-width:1500px) {
+                                padding: 40px;
+                            }
+                            @media screen and (max-width:1500px) {
+                                font-size: 1.2rem;
+                            }
+                            @media screen and (max-width:1125px) {
+                                margin: 0;
+                                margin-top: 200px;
+                                margin-bottom: 100px;
+                            }
+                            @media screen and (max-width:820px) {
+                                font-size: 1.1rem;
+                                width: 100%;
+                            }
+                        }   
+                            h1{ /* titre the best event's*/
+                                font-family: $titleFont;
+                                letter-spacing: 0.3rem;
+                            }
+
+                                .rose {
+                                    position: relative;
+                                    z-index: 1;
+                                    top: 980px;
+                                    left: 70px;
+                                    width: 370px;
+                                    transition: 1s;
+                                    animation-name: rosevisible;
+                                    animation-duration: 10s;
+                                        @media screen and (max-width:2050px){
+                                            left: -50px;
+                                        }
+                                        @media screen and (max-width:1730px){
+                                            left: -35px;
+                                        }
+                                            @media screen and (max-width:1500px) {
+                                            left: -50px;
+                                            top: 830px;
+                                        }
+                                            @media screen and (max-width:1300px) {
+                                            width: 300px;
+                                        }
+                                        @media screen and (max-width:1125px) {
+                                            width: 200px;
+                                            left: -80px;
+                    
+                                        }
+                                        @media screen and (max-width:991px) {
+                                            width: 200px;
+                                            top: 400px;
+                                            left: -25px;
+                    
+                                        }
+                                        @media screen and (max-width:820px) {
+                                            display: none;
+                    
+                                        }
+                
+                
+                                        @keyframes rosevisible {
+                                            from{ opacity: 0;}
+                                            to{opacity: 1;}
+                                        }
+                                }
+        
+        
+        
+    /* Partis suivante Slider */    
+        
+
+.slider {
+    
+    height: 400px;
+    width: 500px;
+    top: 150px;
+    position: relative;
+    transition: 3s;
+    background:rgb(0, 0, 0);
+    z-index: 1;
+    border: 5px groove rgb(189,168,69) ;
+    left: -100px;
+    animation-name: slideright;
+    animation-duration: 5s;
+    @media screen and (max-width:1300px) {
+        top: 150px;
+        width: 400px;
+        height: 300px;
+    }
+        @media screen and (max-width:820px) {
+            left: 2%;
+            width: 300px;
+            height: 200px;
+        
+        }
+        @keyframes slideright {
+            from{
+                opacity: 0;
+            } to {
+                opacity: 1;
+            }
+        }
+
+        .img_slider {
+            width: 50%;
+            height: 100%;
+            margin-left: 25%;
+        }
+
+            .photo_slider img {
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                align-items: center;
+                opacity: 0;
+                transition: 2s;
+                box-shadow: 0px 0px 20px 0px pink;
+        
+            }
+                .photo_slider img.active {
+                    opacity: 1;
+           
+                }
+           
+            }
+}
+
+footer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    font-family: $textfont;
+    text-align: center;
+    align-items: center;
+    border-top: 1px solid black;
+    padding: 50px 0px;
+    margin: 50px;
+    height: 0px;
+    font-size: 1.2rem;
+    color: grey;
+   
+}
+.contact {
+    position: relative;
+    top: 100px;
+}
