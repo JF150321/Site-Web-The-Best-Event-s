@@ -11,13 +11,6 @@ const text3 = document.querySelector(".text3");
 const text4 = document.querySelector(".text4");
 const text5 = document.querySelector(".text5");
 
-btn.addEventListener("click", () => {
-  sidebar.classList.toggle("active");
-});
-
-content.addEventListener("click", () => {
-  sidebar.classList.remove("active");
-});
 title1.addEventListener("click", () => {
   text1.classList.toggle("ouvrir1");
 });
@@ -32,4 +25,11 @@ title4.addEventListener("click", () => {
 });
 title5.addEventListener("click", () => {
   text5.classList.toggle("ouvrir5");
+});
+btn.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+});
+
+content.addEventListener("click", () => {
+  sidebar.classList.remove("active");
 });
