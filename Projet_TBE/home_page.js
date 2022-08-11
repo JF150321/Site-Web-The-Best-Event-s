@@ -1,6 +1,8 @@
 const slider = document.querySelector(".slider");
 let toggle = document.querySelector(".toggle");
 let body = document.querySelector("body");
+const sidebar = document.getElementById("side-bar");
+const content = document.querySelector(".content");
 
 let img_slider = document.getElementsByClassName("img_slider");
 let etape = 0;
@@ -23,4 +25,11 @@ setInterval(function () {
 
 toggle.addEventListener("click", function () {
   body.classList.toggle("open");
+});
+btn.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+});
+
+content.addEventListener("click", () => {
+  sidebar.classList.remove("active");
 });
