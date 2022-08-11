@@ -1,5 +1,5 @@
-let toggle = document.querySelector(".toggle");
-let body = document.querySelector("body");
+const sidebar = document.getElementById("side-bar");
+const content = document.querySelector(".content");
 const title1 = document.querySelector(".title1");
 const title2 = document.querySelector(".title2");
 const title3 = document.querySelector(".title3");
@@ -11,7 +11,13 @@ const text3 = document.querySelector(".text3");
 const text4 = document.querySelector(".text4");
 const text5 = document.querySelector(".text5");
 
-toggle.addEventListener("click", () => body.classList.toggle("open"));
+btn.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+});
+
+content.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+});
 title1.addEventListener("click", () => {
   text1.classList.toggle("ouvrir1");
 });

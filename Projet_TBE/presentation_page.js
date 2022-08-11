@@ -1,6 +1,10 @@
-let toggle = document.querySelector(".toggle");
-let body = document.querySelector("body");
+const sidebar = document.getElementById("side-bar");
+const content = document.querySelector(".content");
 
-toggle.addEventListener("click", function () {
-  body.classList.toggle("open");
+btn.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+});
+
+content.addEventListener("click", () => {
+  sidebar.classList.remove("active");
 });

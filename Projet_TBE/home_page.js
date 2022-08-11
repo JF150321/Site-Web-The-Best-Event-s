@@ -1,5 +1,4 @@
 const slider = document.querySelector(".slider");
-let toggle = document.querySelector(".toggle");
 let body = document.querySelector("body");
 const sidebar = document.getElementById("side-bar");
 const content = document.querySelector(".content");
@@ -23,9 +22,6 @@ setInterval(function () {
   img_slider[etape].classList.add("active");
 }, 3000);
 
-toggle.addEventListener("click", function () {
-  body.classList.toggle("open");
-});
 btn.addEventListener("click", () => {
   sidebar.classList.toggle("active");
 });

@@ -1,148 +1,146 @@
 $colorpink: rgb(255, 239, 241);
-$colorpurple: rgb(166, 146, 169);
+$colorpurple: rgba(166, 146, 169, 0.527);
+$coloror: #bda845;
+$colorblue: #2a4284;
 $titleFont : 'Pinyon Script', cursive;
 $textfont : 'Ibarra Real Nova', serif;
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
- * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* BAR DE NAVIGATION */
 header {
-    position: absolute;
-    width: 100%;
-    height: 9vh;
-    top: 0;
-    left: 0;
-    color: black;
-    padding: 0 2rem;
-    background: $colorpink;
-    transition: 0.5s;
-    z-index: 5;
-    animation-name: apparition;
-        animation-duration: 3s;
-        @keyframes apparition {
-            from{top: -100px;}
-            to{top: 0px;}
-        }
-}
-
-
-    nav {
-        
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        
-        
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  top: 0px;
+  background: $colorpink;
+  font-family: $textfont;
+  border-bottom: 1px solid $colorpurple;
+  animation-name: apparition;
+  animation-duration: 3s;
+    @keyframes apparition {
+      from{top: -100px;}
+      to{top: 0px;}
     }
 
+      #side-bar, .logo_fb_insta2 {
+        display: none;
+      }
 
-
-        .toggle {
-            display: none;
+        .menu {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 10px 100px 0px 50px;
+          list-style: none;
+          letter-spacing: 0.2em;
+      }
+        .fb, .insta {
+          color: black;
+          margin-left: 40px;
+          margin-top: 10px;
         }
-
-            .menu {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                list-style: none;
-                width: 100%;
-                padding: 50px;
-                letter-spacing: 0.3rem;
-                
+          .title_nav {
+            font-size: 1.1rem;
+          }
+            .menu li a {
+              font-size: 1.6rem;
+              text-decoration: none;
+              color: $colorblue;
+                &:hover {
+                  color: $coloror;
+                }
             }
-                .logo_fb_insta {
-                    display: flex;
-                    
+            @media all and (max-width: 991px){
+              .logo_fb_insta2 {
+                display: block;
+                text-align: end;
+                margin-right: 40px;
+                font-family: $textfont ;
+              }
+              .fb2, .insta2 {
+                margin-left: 10px;
+                margin-top: 10px;
+                color: black;
+              }
+              .title_nav2 {
+                font-size: 1.5em;
+                color: $colorblue;
+              }
+              .menu {
+                  display: none;
+              }
+              #side-bar {
+                  display: block;
+                  position: absolute;
+                  width: 100%;
+                  height: 200px;
+                  background: $colorpink;
+                  top: 71px;
+                  left:-100%;
+                  transition: 0.8s ease-out;
+                  z-index: 4;
                 }
-                .fb, .insta {
-                    font-size: 1.4rem;
-                    padding: 10px;
-                    margin: 20px;
-                    color: black;
+                .toggle-btn {
+                  position: fixed;
+                  top: 10px;
+                  left: 10px;
+                  cursor: pointer;
+                  height: 40px;
+                  width: 40px;
+                }
+                .toggle-btn span {
+                  width: 40px;
+                  height: 6px;
+                  border-radius: 5px;
+                  background: $colorblue;
+                  display: block;
+                  margin-top: 5px;
+                  transition: 0.3s ease;
+                }
+                li a {
+                  display: flex;
+                  flex-direction: column;
+                  color: $colorblue;
+                  text-align: center;
+                  margin-top: 10px;
+                  list-style: none;
+                  text-decoration: none;
+                  font-size: 1.5rem;
+                  justify-content: space-around;
+                  cursor: pointer;
+                  padding-left: 5px;
+                    &:hover {
+                      color: $coloror;
+                    }
                 }
                 
-                    .menu li a {
-                        color:  rgb(42,66,132);
-                        text-decoration: none;
-                        font-family: $textfont;
-                        font-size: 1.6rem;
-                            &:hover {
-                                color: grey;
-                            }
-                        }
-                        
-                        @media all and (max-width: 991px) {
-
-                            
-                            nav {
-                                border:none
-                                
-                                }
-
-                            .toggle {
-                                display: block;
-                                margin-left: -15%;
-                                font-size: 2rem;
-                                cursor: pointer;
-                                position: relative;
-                                z-index: 20;
-                            }
-
-                            
-
-                            .ouvrir {
-                                display: block;
-                            }
-
-                            .fermer {
-                                display: none;
-                            }
-
-                            .open .ouvrir {
-                                display: none;
-                            }
-
-                            .open .fermer {
-                                display: block;
-                            }
-
-                            .menu{
-                                position: absolute;
-                                top: 0vh;
-                                left: 0;
-                                width: 100%;
-                                height: 100vh;
-                                background: $colorpink;
-                                flex-direction: column;
-                                padding: 2rem;
-                                justify-content: space-around;
-                                transform: translateX(-100%);
-                                transition: transform 1s;
-                                z-index: 1;
-                                overflow-y: hidden;
-                            }
-
-                            .menu li a {
-                                font-size: 1.3rem;
-                                
-                            }
-                            .logo_tbe {
-                                display: none;
-                            }
-                            
-                            .open .menu {
-                                transform: translateX(0);
-                            }
-                            
-                        }
+                #side-bar.active {
+                  left: 0%;
+                  top: 71px;
+                  
+                }
+                .active span {
+                  position: absolute;
+                  top: 10px;
+                }
+                .active span:nth-child(1) {
+                  transform: rotate(45deg);
+                }
+                .active span:nth-child(2) {
+                  opacity: 0;
+                }
+                .active span:nth-child(3) {
+                  transform: rotate(-45deg);
+                }
+                .active ~ .content {
+                  opacity: 0.3;
+                }
+          }
+}
 .page_presentation {
     display: flex;
     width: 100%;
