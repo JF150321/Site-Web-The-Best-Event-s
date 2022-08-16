@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
 * {
@@ -13,14 +12,13 @@ header {
   width: 100%;
   height: 70px;
   top: 0px;
-  z-index: 5;
   background: #ffeff1;
   font-family: "Ibarra Real Nova", serif;
   border-bottom: 1px solid rgba(166, 146, 169, 0.527);
   -webkit-animation-name: apparition;
           animation-name: apparition;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
 @-webkit-keyframes apparition {
@@ -179,25 +177,35 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 100px;
 }
 
-@media all and (max-width: 991px) {
-  section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 0px;
-  }
+section .logo_tbe2 {
+  width: 400px;
+  height: 400px;
 }
 
-section #rose_pick {
+section .rose {
+  width: 300px;
+  height: 300px;
+}
+
+section .pick_deco {
+  width: 300px;
+  height: 400px;
+}
+
+section .text_home {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,164 +213,23 @@ section #rose_pick {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 100px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-section .Gloire_pick {
-  width: 350px;
-  height: 450px;
-  -webkit-box-shadow: 0px 0px 20px 10px rgba(166, 146, 169, 0.527);
-          box-shadow: 0px 0px 20px 10px rgba(166, 146, 169, 0.527);
-  -webkit-animation-name: apparitionpick;
-          animation-name: apparitionpick;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
-@-webkit-keyframes apparitionpick {
-  from {
-    height: 0;
-  }
-  to {
-    height: 450px;
-  }
-}
-
-@keyframes apparitionpick {
-  from {
-    height: 0;
-  }
-  to {
-    height: 450px;
-  }
-}
-
-@media all and (max-width: 991px) {
-  section .Gloire_pick {
-    width: 200px;
-    height: 250px;
-  }
-  @-webkit-keyframes apparitionpick {
-    from {
-      height: 0;
-    }
-    to {
-      height: 250px;
-    }
-  }
-  @keyframes apparitionpick {
-    from {
-      height: 0;
-    }
-    to {
-      height: 250px;
-    }
-  }
-}
-
-section .rose_deco {
-  width: 60%;
-}
-
-section #center_page_decoration {
-  width: 1px;
-  height: 700px;
-  margin-top: 80px;
-  background: #bda845;
-  margin: 10px;
-  -webkit-animation-name: agrandissement;
-          animation-name: agrandissement;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
-@-webkit-keyframes agrandissement {
-  from {
-    height: 0px;
-  }
-  to {
-    height: 700px;
-  }
-}
-
-@keyframes agrandissement {
-  from {
-    height: 0px;
-  }
-  to {
-    height: 700px;
-  }
-}
-
-@media all and (max-width: 991px) {
-  section #center_page_decoration {
-    height: 1px;
-    width: 80%;
-  }
-  @-webkit-keyframes agrandissement {
-    from {
-      width: 0px;
-    }
-    to {
-      width: _àù;
-    }
-  }
-  @keyframes agrandissement {
-    from {
-      width: 0px;
-    }
-    to {
-      width: _àù;
-    }
-  }
-}
-
-section article {
-  width: 700px;
-  font-family: "Ibarra Real Nova", serif;
-  font-size: 1.2rem;
   text-align: center;
+  padding: 20px;
   color: #2a4284;
-  -webkit-animation: aparitiontext;
-          animation: aparitiontext;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
 }
 
-@-webkit-keyframes aparitiontext {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+section .deco_rose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -100px;
 }
 
-@keyframes aparitiontext {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-section article h1 {
-  font-family: "Pinyon Script", cursive;
+section .deco_text {
+  width: 700px;
+  height: 500px;
+  margin-left: 55px;
   margin-top: -50px;
-}
-
-section article .rose_deco2 {
-  width: 200px;
-}
-
-@media all and (max-width: 991px) {
-  section article {
-    width: 90%;
-  }
 }
 
 footer {
@@ -380,20 +247,15 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   border-top: 1px solid black;
-  padding: 50px;
-  padding-bottom: 0px;
+  padding: 50px 0px;
   margin: 50px;
-  margin-bottom: 0px;
+  height: 0px;
   font-size: 1.2rem;
   color: grey;
-  height: 0%;
 }
 
 .contact {
   position: relative;
+  top: 100px;
 }
-
-.logo {
-  color: black;
-}
-/*# sourceMappingURL=presentation.css.map */
+/*# sourceMappingURL=home_page.css.map */
