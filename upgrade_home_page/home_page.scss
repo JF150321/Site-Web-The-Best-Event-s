@@ -1,0 +1,212 @@
+$colorpink: rgb(255, 239, 241);
+$colorpurple: rgba(166, 146, 169, 0.527);
+$coloror: #bda845;
+$colorblue: #2a4284;
+$titleFont : 'Pinyon Script', cursive;
+$textfont : 'Ibarra Real Nova', serif;
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  top: 0px;
+  background: $colorpink;
+  font-family: $textfont;
+  border-bottom: 1px solid $colorpurple;
+  animation-name: apparition;
+  animation-duration: 3s;
+    @keyframes apparition {
+      from{top: -100px;}
+      to{top: 0px;}
+    }
+
+      #side-bar, .logo_fb_insta2 {
+        display: none;
+      }
+
+        .menu {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 10px 100px 0px 50px;
+          list-style: none;
+          letter-spacing: 0.2em;
+      }
+        .fb, .insta {
+          color: black;
+          margin-left: 40px;
+          margin-top: 10px;
+        }
+          .title_nav {
+            font-size: 1.1rem;
+          }
+            .menu li a {
+              font-size: 1.6rem;
+              text-decoration: none;
+              color: $colorblue;
+                &:hover {
+                  color: $coloror;
+                }
+            }
+            @media all and (max-width: 991px){
+              .logo_fb_insta2 {
+                display: block;
+                text-align: end;
+                margin-right: 40px;
+                font-family: $textfont ;
+              }
+              .fb2, .insta2 {
+                margin-left: 10px;
+                margin-top: 10px;
+                color: black;
+              }
+              .title_nav2 {
+                font-size: 1.5em;
+                color: $colorblue;
+              }
+              .menu {
+                  display: none;
+              }
+              #side-bar {
+                  display: block;
+                  position: absolute;
+                  width: 100%;
+                  height: 200px;
+                  background: $colorpink;
+                  top: 71px;
+                  left:-100%;
+                  transition: 0.8s ease-out;
+                  z-index: 4;
+                }
+                .toggle-btn {
+                  position: fixed;
+                  top: 10px;
+                  left: 10px;
+                  cursor: pointer;
+                  height: 40px;
+                  width: 40px;
+                }
+                .toggle-btn span {
+                  width: 40px;
+                  height: 6px;
+                  border-radius: 5px;
+                  background: $colorblue;
+                  display: block;
+                  margin-top: 5px;
+                  transition: 0.3s ease;
+                }
+                li a {
+                  display: flex;
+                  flex-direction: column;
+                  color: $colorblue;
+                  text-align: center;
+                  margin-top: 10px;
+                  list-style: none;
+                  text-decoration: none;
+                  font-size: 1.5rem;
+                  justify-content: space-around;
+                  cursor: pointer;
+                  padding-left: 5px;
+                    &:hover {
+                      color: $coloror;
+                    }
+                }
+                
+                #side-bar.active {
+                  left: 0%;
+                  top: 71px;
+                  
+                }
+                .active span {
+                  position: absolute;
+                  top: 10px;
+                }
+                .active span:nth-child(1) {
+                  transform: rotate(45deg);
+                }
+                .active span:nth-child(2) {
+                  opacity: 0;
+                }
+                .active span:nth-child(3) {
+                  transform: rotate(-45deg);
+                }
+                .active ~ .content {
+                  opacity: 0.3;
+                }
+          }
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    
+        .logo_tbe2 {
+            width: 400px;
+            height: 400px;
+        }
+           .rose{
+            width: 300px;
+            height: 300px;
+            
+           }
+            .pick_deco {
+                width: 300px;
+                height: 400px;
+            }
+                .text_home {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 20px;
+                    color: $colorblue;
+                }
+                    .deco_rose {
+                        display: flex;
+                        margin-top: -100px;
+                    }
+                        .deco_text{
+                            width: 700px;
+                            height: 500px;
+                            margin-left: 55px;
+                            margin-top: -50px;
+                        }
+                            
+        
+    }
+                
+
+    
+        
+
+
+
+
+footer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    font-family: $textfont;
+    text-align: center;
+    align-items: center;
+    border-top: 1px solid black;
+    padding: 50px 0px;
+    margin: 50px;
+    height: 0px;
+    font-size: 1.2rem;
+    color: grey;
+   
+}
+.contact {
+    position: relative;
+    top: 100px;
+}
