@@ -249,8 +249,34 @@ header {
                         @media screen and (max-width:820px) {
                             left: 2%;
                         }
+                        @media screen and (max-width:520px) {
+                            margin-top: -60px;
+                            margin-bottom: 50px;
+                        }
                             
                     }
+                    .deco_logo{
+                        display: none;
+                        @media screen and (max-width:520px) {
+                            display: block;
+                            height: 1px;
+                            width: 400px;
+                            background: $coloror;
+                            position: absolute;
+                            z-index: 40;
+                            top: 300px;
+                            animation-name: decoApparition;
+                            animation-duration: 3s;
+                            @keyframes decoApparition {
+                                from {
+                                    width: 0px;
+                                }
+                                to {
+                                    width: 400px;
+                                }
+                            }
+                    }
+                }
 
                     .text_home {
                         

@@ -327,6 +327,49 @@ header .menu li a:hover {
   }
 }
 
+@media screen and (max-width: 520px) {
+  #home_page .logo_tbe2 {
+    margin-top: -60px;
+    margin-bottom: 50px;
+  }
+}
+
+#home_page .deco_logo {
+  display: none;
+}
+
+@media screen and (max-width: 520px) {
+  #home_page .deco_logo {
+    display: block;
+    height: 1px;
+    width: 400px;
+    background: #bda845;
+    position: absolute;
+    z-index: 40;
+    top: 300px;
+    -webkit-animation-name: decoApparition;
+            animation-name: decoApparition;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+  }
+  @-webkit-keyframes decoApparition {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 400px;
+    }
+  }
+  @keyframes decoApparition {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 400px;
+    }
+  }
+}
+
 #home_page .text_home {
   font-family: 'Ibarra Real Nova', serif;
   font-size: 1.4rem;
