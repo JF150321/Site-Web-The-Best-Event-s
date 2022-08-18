@@ -331,6 +331,7 @@ header .menu li a:hover {
   #home_page .logo_tbe2 {
     margin-top: -60px;
     margin-bottom: 50px;
+    left: 0px;
   }
 }
 
@@ -342,7 +343,7 @@ header .menu li a:hover {
   #home_page .deco_logo {
     display: block;
     height: 1px;
-    width: 400px;
+    width: 300px;
     background: #bda845;
     position: absolute;
     z-index: 40;
@@ -357,7 +358,7 @@ header .menu li a:hover {
       width: 0px;
     }
     to {
-      width: 400px;
+      width: 300px;
     }
   }
   @keyframes decoApparition {
@@ -365,7 +366,7 @@ header .menu li a:hover {
       width: 0px;
     }
     to {
-      width: 400px;
+      width: 300px;
     }
   }
 }
@@ -552,6 +553,13 @@ header .menu li a:hover {
     left: 2%;
     width: 300px;
     height: 200px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  #home_page .slider {
+    display: block;
+    margin-left: -20px;
   }
 }
 

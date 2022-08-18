@@ -252,6 +252,7 @@ header {
                         @media screen and (max-width:520px) {
                             margin-top: -60px;
                             margin-bottom: 50px;
+                            left: 0px;
                         }
                             
                     }
@@ -260,7 +261,7 @@ header {
                         @media screen and (max-width:520px) {
                             display: block;
                             height: 1px;
-                            width: 400px;
+                            width: 300px;
                             background: $coloror;
                             position: absolute;
                             z-index: 40;
@@ -272,7 +273,7 @@ header {
                                     width: 0px;
                                 }
                                 to {
-                                    width: 400px;
+                                    width: 300px;
                                 }
                             }
                     }
@@ -399,6 +400,10 @@ header {
             width: 300px;
             height: 200px;
         
+        }
+        @media screen and (max-width:520px) {
+            display: block;
+            margin-left: -20px;
         }
         @keyframes slideright {
             from{
